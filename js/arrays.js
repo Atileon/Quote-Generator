@@ -2,16 +2,16 @@
 
 // ARRAYS WITH QUOTE COMPONENTS
 
-let adjArticle = ['a','an', 'the'];
+const adjArticle = ['a', 'the'];
 
-let adjSuperlative =['coldest', 'driest', 'funniest', 'hottest', 'prettiest', 'sharpest'];
+const adjSuperlative =['coldest', 'driest', 'funniest', 'hottest', 'prettiest', 'sharpest'];
 
-let nounAbstract = ['love', 'wealth', 'happiness', 'pride', 'fear', 'religion', 'belief', 'history', 'communication'];
+const nounAbstract = ['love', 'wealth', 'happiness', 'pride', 'fear', 'religion', 'belief', 'history', 'communication'];
 
-let verb = ['clean', 'cut', 'drive', 'eat', 'fly','go', 'live', 'make', 'play', 'read', 'run', 'show', 'smile', 'throw', 'trip', 'walk', 'wash', 'write', 'swim'];
+const verb = ['clean', 'cut', 'drive', 'eat', 'fly','go', 'live', 'make', 'play', 'read', 'run', 'show', 'smile', 'throw', 'trip', 'walk', 'wash', 'write', 'swim'];
 
-let nounCommon = ['man', 'mountain', 'state', 'ocean', 'country', 'building', 'cat', 'dog'];
+const nounCommon = ['man', 'mountain', 'state', 'ocean', 'country', 'building', 'cat', 'dog'];
 
-let advTowhat = ['extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very','extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very'];
+const advTowhat = ['extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very','extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very'];
 
-let advHow = ['beautifully', 'briskly', 'brutally', 'carefully', 'cheerfully', 'competitively', 'extravagantly', 'gracefully', 'grimly', 'happily', 'hungrily', 'lazily', 'loyally', 'quickly', 'quietly', 'savagely', 'stylishly', 'urgently', 'wishfully', 'worriedly'];
+const advHow = ['beautifully', 'briskly', 'brutally', 'carefully', 'cheerfully', 'competitively', 'extravagantly', 'gracefully', 'grimly', 'happily', 'hungrily', 'lazily', 'loyally', 'quickly', 'quietly', 'savagely', 'stylishly', 'urgently', 'wishfully', 'worriedly'];

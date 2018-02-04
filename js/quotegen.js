@@ -16,15 +16,18 @@ let w7 = advHow;
 //This function to repeat sentences at (n) times
 
 function repeatQuotes(n){
+
   let genQuote = [];
   for(let i = 0; i < n ; i++){
     let arr = new quote(w1, w2, w3, w4, w5, w6, w7);
     genQuote.push(arr);
   }
   genQuote.forEach(function(quote){
+
     console.log(quote.generator());
   });
 }
 
 // Repeat call to (any) times do you want
-repeatQuotes(6);
+// repeatQuotes(6);
+$('#qgencontainer').repeatQuotes(3);

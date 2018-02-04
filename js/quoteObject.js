@@ -20,7 +20,7 @@ function quote(w1, w2, w3, w4, w5, w6, w7){
 quote.prototype.generator = function(){
 
     let theQuote =
-    '"'
+    '<p>"'
     +this.w1+' '
     +this.w2+' '
     +this.w3+' '
@@ -28,7 +28,7 @@ quote.prototype.generator = function(){
     +this.w5+' '
     +this.w6+' '
     +this.w7
-    +'"';
+    +'"</p>';
     return theQuote;
 
 }
