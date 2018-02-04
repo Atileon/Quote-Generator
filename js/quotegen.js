@@ -1,38 +1,30 @@
 // The Aim on this project is to create a quote generator
 
-// TODO: Create an object to generate Quotes     DONE
 
-// TODO: Create an Array to get in the quotes and authors  DONE
 
-// TODO: Initialize with a foreach      DONE
+//This variables takes the Arrays defined at the arrays.js file script with the components of a sentence
 
-// Quote object block
-function quote(quote, author){
-  this.quote = quote;
-  this.author = author;
+let w1 = adjArticle;
+let w2 = adjSuperlative;
+let w3 = nounAbstract;
+let w4 = verb;
+let w5 = nounCommon;
+let w6 = advTowhat;
+let w7 = advHow;
+
+
+//This function to repeat sentences at (n) times
+
+function repeatQuotes(n){
+  let genQuote = [];
+  for(let i = 0; i < n ; i++){
+    let arr = new quote(w1, w2, w3, w4, w5, w6, w7);
+    genQuote.push(arr);
+  }
+  genQuote.forEach(function(quote){
+    console.log(quote.generator());
+  });
 }
 
-  quote.prototype.generator = function(){
-    var theQuote = '"' + this.quote + '"\n-'+ this.author + '-';
-    return theQuote;
-  }
-//=========================================================
-
-// New objects to get into the array
-var quote1= new quote('A baby gotta do what a baby gotta do', 'Chuck');
-var quote2 = new quote('Happines is a mindset','Someone');
-var quote3 = new quote('Take my money','Some meme');
-
-
-// The Array and the pushes
-var quotes = [];
-quotes.push(quote1);
-quotes.push(quote2);
-quotes.push(quote3);
-
-
-//The forEach to print on console the generated quotes
-
-quotes.forEach(function(quote){
-  console.log(quote.generator());
-});
+// Repeat call to (any) times do you want
+repeatQuotes(6);
