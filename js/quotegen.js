@@ -15,7 +15,7 @@ let w7 = advHow;
 
 //This function to repeat sentences at (n) times
 
-function repeatQuotes(n){
+function repeatQuotes(container,n){
 
   let genQuote = [];
   for(let i = 0; i < n ; i++){
@@ -23,11 +23,11 @@ function repeatQuotes(n){
     genQuote.push(arr);
   }
   genQuote.forEach(function(quote){
+    return quote.generator(container);
 
-    console.log(quote.generator());
   });
 }
 
 // Repeat call to (any) times do you want
 // repeatQuotes(6);
-$('#qgencontainer').repeatQuotes(3);
+repeatQuotes('qgencontainer',4);

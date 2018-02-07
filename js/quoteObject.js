@@ -17,18 +17,20 @@ function quote(w1, w2, w3, w4, w5, w6, w7){
   this.w7 = rand(w7);
 }
 
-quote.prototype.generator = function(){
+quote.prototype.generator = function(container){
 
     let theQuote =
-    '<p>"'
-    +this.w1+' '
+    this.w1+' '
     +this.w2+' '
     +this.w3+' '
     +this.w4+' '
     +this.w5+' '
     +this.w6+' '
-    +this.w7
-    +'"</p>';
-    return theQuote;
+    +this.w7;
+    let node = document.createElement('p');
+    let nodeQuote = document.createTextNode(theQuote);
+    let quotes = node.appendChild(nodeQuote);
+    let target = document.getElementById(container);
+    return    target.appendChild(quotes);
 
 }
