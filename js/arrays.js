@@ -14,13 +14,13 @@ The project recall on this order the Js files
 
 const adjArticle = ['a', 'the'];
 
-const adjSuperlative =['coldest', 'driest', 'funniest', 'hottest', 'prettiest', 'sharpest'];
+const adjSuperlative =['coldest', 'driest', 'funniest', 'hottest', 'prettiest', 'sharpest','cheapest', 'closest', 'cutest', 'darkest', 'dustiest', 'fastest', 'finest', 'best', 'greatest', 'hardest', 'longest', 'nearest', 'newest', 'nicest', 'poorest', 'richest', 'saddest', 'safest', 'shiniest', 'shortest', 'smoothest', 'softest', 'strongest', 'ugliest', 'worthiest', 'youngest'];
 
-const nounAbstract = ['love', 'wealth', 'happiness', 'pride', 'fear', 'religion', 'belief', 'history', 'communication'];
+const nounAbstract = ['love', 'wealth', 'happiness', 'pride', 'fear', 'religion', 'belief', 'history', 'communication','intelligence', 'trust', 'vacation', 'dream', 'loyal', 'pain', 'hunger', 'hate', 'beauty'];
 
-const verb = ['clean', 'cut', 'drive', 'eat', 'fly','go', 'live', 'make', 'play', 'read', 'run', 'show', 'smile', 'throw', 'trip', 'walk', 'wash', 'write', 'swim'];
+const verb = ['clean', 'cut', 'drives', 'eat', 'fly','go', 'live', 'makes', 'plays', 'run', 'show', 'throw', 'trip', 'walk', 'wash', 'write', 'swim', 'awake', 'bears', 'beats', 'bites', 'blows', 'break', 'breed', 'bring', 'build', 'burn', 'buy', 'catch', 'choose', 'come', 'hide', 'hit', 'hold', 'hurt', 'lay', 'leave', 'prove', 'put', 'saw', 'see', 'send', 'shake', 'shoot', 'smells', 'takes'];
 
-const nounCommon = ['man', 'mountain', 'state', 'ocean', 'country', 'building', 'cat', 'dog'];
+const nounCommon = ['man', 'mountain', 'state', 'ocean', 'country', 'building', 'cat', 'dog', 'people', 'world', 'life', 'system', 'program', 'number', 'water', 'room', 'money', 'power', 'game', 'car', 'president', 'idea', 'parent', 'health', 'morning', 'moment', 'force'];
 
 const advToWhat = ['extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very','extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very'];
 
