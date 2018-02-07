@@ -34,8 +34,8 @@ function repeatQuotes(id,n){
 $('.secondBtn, .firstBtn').click(function(){
 
   let quotes = 4; // It will set how many quotes would be displayed in a random range
-  let parent = $(this).parent().attr('id');//It pass the container parameter from the button element
-  let num = Math.floor((Math.random() * quotes) + 1);// te random value for the number of quotes on display
+  let parent = $(this).parent().attr('id');//It pass the container parameter for repeatQuotes() in this case the parent of buttons.
+  let num = Math.floor((Math.random() * quotes) + 1);// te random value for the number(numeric parameter on repeatQuotes function) of quotes on display
 
   $(this).nextUntil('.descr', 'p').remove();//This to remove the previous quotes created on click event.
 
