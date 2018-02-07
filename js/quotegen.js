@@ -2,32 +2,42 @@
 
 
 
-//This variables takes the Arrays defined at the arrays.js file script with the components of a sentence
+//This variables takes the name of the Arrays defined at the arrays.js file script with the components of a sentence
 
 let w1 = adjArticle;
 let w2 = adjSuperlative;
 let w3 = nounAbstract;
 let w4 = verb;
 let w5 = nounCommon;
-let w6 = advTowhat;
+let w6 = advToWhat;
 let w7 = advHow;
 
 
-//This function to repeat sentences at (n) times
+//This function to repeat sentences on (id) container at (n) times
 
-function repeatQuotes(container,n){
+function repeatQuotes(id,n){
 
-  let genQuote = [];
+  let genQuote = [];//here we store the quotes objects into an array
   for(let i = 0; i < n ; i++){
-    let arr = new quote(w1, w2, w3, w4, w5, w6, w7);
-    genQuote.push(arr);
+    let quoteArray = new quote(w1, w2, w3, w4, w5, w6, w7);
+    genQuote.push(quoteArray);
   }
-  genQuote.forEach(function(quote){
-    return quote.generator(container);
 
+  genQuote.forEach(function(quote){
+    return quote.generator(id);
   });
 }
+// so, this would call the function
 
-// Repeat call to (any) times do you want
-// repeatQuotes(6);
-repeatQuotes('qgencontainer',4);
+/* Call repeatQuotes function directly on jQuery selector/s adding some variables to pass on repeatQuotes function */
+
+$('.secondBtn, .firstBtn').click(function(){
+
+  let quotes = 4; // It will set how many quotes would be displayed in a random range
+  let parent = $(this).parent().attr('id');//It pass the container parameter from the button element
+  let num = Math.floor((Math.random() * quotes) + 1);// te random value for the number of quotes on display
+
+  $(this).nextUntil('.descr', 'p').remove();//This to remove the previous quotes created on click event.
+
+  repeatQuotes(parent, num);
+});
