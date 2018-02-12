@@ -32,8 +32,9 @@ quote.prototype.generator = function(id,type){
     +this.w6+' '
     +this.w7;
 
+    console.log(crazyQuote);
 
-    newEl.className = 'crazyQuote';
+    newEl.className = 'crazyQuote text-capitalize';
     newEl.innerHTML = crazyQuote;
 
 
@@ -52,6 +53,7 @@ function wiseOwl(theQuote){
     let rand = array[Math.floor(Math.random() * array.length)];
     return rand;
   }
+
   let quoteResult = rand(theQuote);
 
   this.author = quoteResult.author;
@@ -66,7 +68,9 @@ wiseOwl.prototype.generator = function(id){
   this.author+
   ' -</span>';
 
-  newEl.className = 'wiseQuote';
+  console.log(wiseQuote);
+
+  newEl.className = 'wiseQuote text-capitalize';
   newEl.innerHTML = wiseQuote;
 
   let container = document.getElementById(id);

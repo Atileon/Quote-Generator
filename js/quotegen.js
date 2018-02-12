@@ -39,7 +39,26 @@ function repeatQuotes(id,type,n){
   });
 }
 
+//The followin to change the Owl :P
 
+$('.crazyMode').click(function(){
+  $('.crazyOwl').removeClass('d-none');
+  $('.wiseOwl').addClass('d-none');
+});
+$('.wiseMode').click(function(){
+  $('.wiseOwl').removeClass('d-none');
+  $('.crazyOwl').addClass('d-none');
+});
+
+//This for append the value of the slider
+var slider = document.getElementById("myRange");
+var output = document.getElementById("valueSlider");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
 
 
 /* Call repeatQuotes function directly on jQuery selector/s adding some variables to pass on repeatQuotes function */
@@ -48,25 +67,32 @@ $('.firstBtn, .secondBtn').click(function(){
 
   let type = $(this).attr('data-type'); //this to set the type of quote: wise or crazy
 
-  let quotes = 4; // It will set how many quotes would be displayed in a random range
-  let parent = $(this).parent().attr('id');//It pass the container parameter for repeatQuotes() in this case the parent of buttons.
-  let num = Math.floor((Math.random() * quotes) + 1);// te random value for the number(numeric parameter on repeatQuotes function) of quotes on display
+  let idContainer = $(this).parent().siblings().attr('id');//It pass the container parameter for repeatQuotes() in this case the parent of buttons.
+  //
+  // let quotes = 4; // It will set how many quotes would be displayed in a random range
+  // let num = Math.floor((Math.random() * quotes) + 1);// te random value for the number(numeric parameter on repeatQuotes function) of quotes on display
 
-  $(this).nextUntil('.descr', 'p').remove();//This to remove the previous quotes created on click event.
+  let num = $('#myRange').val();
 
-  repeatQuotes(parent,type, num);
+
+  $('#'+idContainer).children().remove();//This to remove the previous quotes created on click event.
+
+  let generatedQuote = repeatQuotes(idContainer,type, num);
+
+  return generatedQuote;
 });
-
 
 
 //The next lines to set an Interval to the Famous quotes
 
 
 function wiseOnTimer(){
-  let theCont = 'thirdContainer';
+  let theCont = 'wiseOnTimer';
   let theType = 'wise';
   $('#'+theCont).children('.wiseQuote').remove();
-  repeatQuotes(theCont, theType,2);
+
+  repeatQuotes(theCont, theType,1);
 }
 
-setInterval(wiseOnTimer,2000);
+wiseOnTimer();
+setInterval(wiseOnTimer,7000);
