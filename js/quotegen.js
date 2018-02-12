@@ -12,26 +12,41 @@ let w5 = nounCommon;
 let w6 = advToWhat;
 let w7 = advHow;
 
+let quoteArr = quotes;
+
 
 //This function to repeat sentences on (id) container at (n) times
-
-function repeatQuotes(id,n){
+function repeatQuotes(id,type,n){
 
   let genQuote = [];//here we store the quotes objects into an array
   for(let i = 0; i < n ; i++){
-    let quoteArray = new quote(w1, w2, w3, w4, w5, w6, w7);
-    genQuote.push(quoteArray);
+    if (type == 'wise'){
+
+      let quoteArray = new wiseOwl(quoteArr);
+      genQuote.push(quoteArray);
+
+    } else if (type == 'crazy') {
+
+      let quoteArray = new quote(w1, w2, w3, w4, w5, w6, w7);
+      genQuote.push(quoteArray);
+
+    }
+
   }
 
   genQuote.forEach(function(quote){
     return quote.generator(id);
   });
 }
-// so, this would call the function
+
+
+
 
 /* Call repeatQuotes function directly on jQuery selector/s adding some variables to pass on repeatQuotes function */
 
-$('.secondBtn, .firstBtn').click(function(){
+$('.firstBtn, .secondBtn').click(function(){
+
+  let type = $(this).attr('data-type'); //this to set the type of quote: wise or crazy
 
   let quotes = 4; // It will set how many quotes would be displayed in a random range
   let parent = $(this).parent().attr('id');//It pass the container parameter for repeatQuotes() in this case the parent of buttons.
@@ -39,5 +54,19 @@ $('.secondBtn, .firstBtn').click(function(){
 
   $(this).nextUntil('.descr', 'p').remove();//This to remove the previous quotes created on click event.
 
-  repeatQuotes(parent, num);
+  repeatQuotes(parent,type, num);
 });
+
+
+
+//The next lines to set an Interval to the Famous quotes
+
+
+function wiseOnTimer(){
+  let theCont = 'thirdContainer';
+  let theType = 'wise';
+  $('#'+theCont).children('.wiseQuote').remove();
+  repeatQuotes(theCont, theType,2);//This must be changed for the famous quotes object
+}
+
+setInterval(wiseOnTimer,2000);
