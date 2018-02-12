@@ -18,10 +18,88 @@ const adjSuperlative =['coldest', 'driest', 'funniest', 'hottest', 'prettiest', 
 
 const nounAbstract = ['love', 'wealth', 'happiness', 'pride', 'fear', 'religion', 'belief', 'history', 'communication','intelligence', 'trust', 'vacation', 'dream', 'loyal', 'pain', 'hunger', 'hate', 'beauty'];
 
-const verb = ['clean', 'cut', 'drives', 'eat', 'fly','go', 'live', 'makes', 'plays', 'run', 'show', 'throw', 'trip', 'walk', 'wash', 'write', 'swim', 'awake', 'bears', 'beats', 'bites', 'blows', 'break', 'breed', 'bring', 'build', 'burn', 'buy', 'catch', 'choose', 'come', 'hide', 'hit', 'hold', 'hurt', 'lay', 'leave', 'prove', 'put', 'saw', 'see', 'send', 'shake', 'shoot', 'smells', 'takes'];
+const verb = ['clean', 'cuts', 'drives', 'eats', 'flies','goes', 'lives', 'makes', 'plays', 'runs', 'shows', 'throws', 'trips', 'walks', 'washes', 'writes', 'swims', 'awakes', 'bears', 'beats', 'bites', 'blows', 'breaks', 'breeds', 'brings', 'builds', 'burns', 'buys', 'catches', 'choose', 'comes', 'hides', 'hits', 'holds', 'hurts', 'lays', 'leaves', 'prove', 'put', 'sees', 'sends', 'shakes', 'shoots', 'smells', 'takes'];
 
 const nounCommon = ['man', 'mountain', 'state', 'ocean', 'country', 'building', 'cat', 'dog', 'people', 'world', 'life', 'system', 'program', 'number', 'water', 'room', 'money', 'power', 'game', 'car', 'president', 'idea', 'parent', 'health', 'morning', 'moment', 'force'];
 
 const advToWhat = ['extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very','extremely', 'not', 'quite', 'rather', 'really', 'terribly', 'too', 'very'];
 
 const advHow = ['beautifully', 'briskly', 'brutally', 'carefully', 'cheerfully', 'competitively', 'extravagantly', 'gracefully', 'grimly', 'happily', 'hungrily', 'lazily', 'loyally', 'quickly', 'quietly', 'savagely', 'stylishly', 'urgently', 'wishfully', 'worriedly'];
+
+//========================================
+
+//The Followin Arrays to store the famous repeatQuotes
+const quotes = [
+  {
+    author: 'Kevin Kruse',
+    quote: 'Life is about making an impact, not making an income.'
+  },
+  {
+    author : 'Napoleon Hill',
+    quote : 'Whatever the mind of man can conceive and believe, it can achieve.'
+  },
+  {
+    author: 'Albert Einstein',
+    quote: 'Strive not to be a success, but rather to be of value.'
+  },
+  {
+    author: 'Florence Nightingale',
+    quote: 'I attribute my success to this: I never gave or took any excuse.'
+  },
+  {
+    author: 'Wayne Gretzky',
+    quote: 'You miss 100% of the shots you don’t take.'
+  },
+  {
+    author: 'Amelia Earhart',
+    quote: 'The most difficult thing is the decision to act, the rest is merely tenacity.'
+  },
+  {
+    author: 'Babe Ruth',
+    quote: 'Every strike brings me closer to the next home run.'
+  },
+  {
+    author: 'W. Clement Stone',
+    quote: 'Definiteness of purpose is the starting point of all achievement.'
+  },
+  {
+    author: 'Kevin Kruse',
+    quote: 'Life isn\'t about getting and having, it\'s about giving and being.'
+  },
+  {
+    author: 'John Lennon',
+    quote: 'Life is what happens to you while you’re busy making other plans.'
+  },
+//
+  {
+    author: 'Earl Nightingale',
+    quote: 'We become what we think about.'
+  },{
+    author: 'Charles Swindoll',
+    quote: 'Life is 10% what happens to me and 90% of how I react to it.'
+  },{
+    author: 'Buddha',
+    quote: 'The mind is everything. What you think you become.'
+  },{
+    author: 'Chinese Proverb',
+    quote: 'The best time to plant a tree was 20 years ago. The second best time is now.'
+  },{
+    author: 'Socrates',
+    quote: 'An unexamined life is not worth living.'
+  },{
+    author: 'Woody Allen',
+    quote: 'Eighty percent of success is showing up.'
+  },{
+    author: 'Steve Jobs',
+    quote: 'Your time is limited, so don’t waste it living someone else’s life.'
+  },{
+    author: 'Stephen Covey',
+    quote: 'I am not a product of my circumstances. I am a product of my decisions.'
+  },{
+    author: 'Jim Rohn',
+    quote: 'Either you run the day, or the day runs you.'
+  },{
+    author: 'Henry Ford',
+    quote: 'Whether you think you can or you think you can’t, you’re right.'
+  },
+];
