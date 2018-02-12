@@ -66,7 +66,7 @@ function wiseOnTimer(){
   let theCont = 'thirdContainer';
   let theType = 'wise';
   $('#'+theCont).children('.wiseQuote').remove();
-  repeatQuotes(theCont, theType,2);//This must be changed for the famous quotes object
+  repeatQuotes(theCont, theType,2);
 }
 
 setInterval(wiseOnTimer,2000);
