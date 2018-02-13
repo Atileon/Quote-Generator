@@ -5,88 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Crazy Owl Quote Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Caveat|Julee|Nanum+Pen+Script" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!-- THE MAIN TITLE -->
+    <h1 class="text-center text-uppercase mt-5 col-12 gen-title">Owl Quote Generator<br><small class="text-muted gen-sub">An Openclassroom Project by AvA</small></h1>
 
-    <!--
-<div id="test" class="d-none">
-  <h1>The Quote Generator</h1>
+    <div class="container">
 
-  <div id= 'firstContainer'>
-    <h2>First Block</h2>
-    <p class="descr">This block is the first one</p>
-    <button data-type="wise" name="button" class="firstBtn">FIRST</button>
-  </div>
+      <div class="row justify-content-center mt-3">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Switch the Owl">
+          <button class="btn btn-secondary crazyMode" type="button">Crazy Owl</button>
+          <button class="btn btn-secondary wiseMode" type="button">Wise Owl</button>
+        </div>
+      </div>
 
-  <div id="secondContainer">
-    <h2>Second Block</h2>
-    <p class="descr">This block is the second one</p>
-    <button data-type="crazy" name="button" class="secondBtn">SECOND</button>
-  </div>
+      <!-- RANGE SLIDER -->
+      <div class="row justify-content-center pt-3">
+        <p class="col-12 text-center slideTxt">How many Quotes?</p>
+        <div class="slidecontainer col-12 col-sm-6 m-2">
+         <input type="range" id="myRange" class="slider" min="1" max="5" value="1">
+         <p id="valueSlider" class="text-center pt-3"></p>
+        </div>
+      </div>
+      <div class="row col-12 justify-content-center">
+        <p class="text-center slideTxt">Click on the Image to Generate the Quotes</p>
+      </div>
 
-  <div id="thirdContainer">
-    <h2>Third on time</h2>
-    <p class="descr">This Block recall function on a time interval</p>
+      <!-- THE CRAZY OWL SECTION -->
+      <div id="crazy" class="row mt-3 crazyOwl">
+        <div class="col-12 col-sm-5">
+          <a href="#crazy" class="btn firstBtn" data-type="crazy" role="button">
+            <img class="img-fluid myImg" src="img/owlCoffee.jpg" alt="The Crazy Owl">
+          </a>
 
-  </div>
-</div> -->
+        </div>
+        <div id="crazyContainer" class="col-12 col-sm-7">
+          <!-- Here is generated the quotes -->
+        </div>
+      </div>
 
+      <!-- THE WISE OWL SECTION -->
+      <div id="wise" class="row wiseOwl d-none">
+        <div class="col-12 col-sm-5">
+          <a href="#wise"  data-type="wise" class="btn firstBtn" role="button">
+            <img class="img-fluid myImg" src="img/wiseOwl.jpg" alt="The Wise Owl">
+          </a>
 
-<h1 class="text-center mt-5 col-12">Owl Quote Generator<br><small class="text-muted">An Openclassroom Project</small></h1>
-
-<div class="container">
-
-  <div class="row justify-content-center m-5">
-    <div class="btn-group btn-group-lg" role="group" aria-label="Switch the Owl">
-      <button class="btn btn-secondary crazyMode" type="button">Crazy Owl</button>
-      <button class="btn btn-secondary wiseMode" type="button">Wise Owl</button>
-    </div>
-  </div>
-
-  <!-- RANGE SLIDER -->
-  <div class="row justify-content-center p-3">
-    <p class="text-center">How many Quotes?</p>
-    <div class="slidecontainer col-12 col-sm-6 m-2">
-     <input type="range" id="myRange" class="slider" min="1" max="5" value="1">
-     <p id="valueSlider" class="text-center pt-3">Quotes</p>
-    </div>
-  </div>
-
-  <div id="crazy" class="row crazyOwl">
-    <div class="col-12 col-sm-5">
-      <a href="#crazy" class="btn firstBtn" data-type="crazy" role="button">
-        <img class="img-fluid" src="img/owlCoffee.jpg" alt="The Crazy Owl">
-      </a>
-
-    </div>
-    <div id="crazyContainer" class="col-12 col-sm-7">
-      <!-- Here is generated the quotes -->
-    </div>
-  </div>
-
-  <div id="wise" class="row wiseOwl d-none">
-    <div class="col-12 col-sm-5">
-      <a href="#wise"  data-type="wise" class="btn firstBtn" role="button">
-        <img class="img-fluid" src="img/wiseOwl.jpg" alt="The Wise Owl">
-      </a>
+        </div>
+        <div id="wiseContainer" class="col-12 col-sm-7">
+          <!-- Here is generated the quotes -->
+        </div>
+        <!-- The quote generated at interval -->
+        <div id="wiseOnTimer" class="col-12 text-center p-5">
+          <!-- Here is generated the quotes -->
+        </div>
+      </div>
 
     </div>
-    <div id="wiseContainer" class="col-12 col-sm-7">
-      <!-- Here is generated the quotes -->
-    </div>
-
-    <div id="wiseOnTimer" class="col-12 text-center p-5"></div>
-  </div>
-
-  <!-- <div class="row quoteOnTimer">
-    <div id="wiseOnTimer" class="col-12 text-center"></div>
-  </div> -->
-
-
-
-</div>
 
 
 
@@ -102,12 +81,11 @@
 
 
 
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     </script>
     <script type="text/javascript" src="js/arrays.js">

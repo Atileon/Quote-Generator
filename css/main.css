@@ -1,3 +1,9 @@
+
+
+/*==========================================================
+          THIS SECTION FOR THE RANGE Slider
+===========================================================*/
+
 .slidecontainer {
     width: 100%; /* Width of the outside container */
 }
@@ -36,4 +42,51 @@
     height: 40px; /* Slider handle height */
     background: #e57814; /* Green background */
     cursor: pointer; /* Cursor on hover */
+}
+
+/*==========================================================
+          PERSONAL STYLES
+===========================================================*/
+/* font-family: 'Nanum Pen Script', cursive;
+font-family: 'Annie Use Your Telescope', cursive;
+font-family: 'Julee', cursive;
+font-family: 'Caveat', cursive; */
+body{
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 1.2rem;
+}
+.gen-title, .btn{
+  font-family: 'Julee',cursive !important;
+}
+.gen-sub{
+  font-size: 1.2rem;
+}
+.btn{
+  font-size: 1.7rem !important;
+}
+.slideTxt{
+  font-size: 1.7rem;
+}
+#valueSlider{
+  font-size: 2.2rem;
+}
+#crazyContainer>p{
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 1.5rem;
+}
+.crazyQuote, .wiseQuote{
+  padding-top: 1rem !important;
+}
+#wiseContainer>p{
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+}
+#wiseOnTimer>p{
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+}
+
+.myImg{
+  border-radius: 20px;
+  box-shadow: 0 7px 20px #777;
 }
