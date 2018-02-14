@@ -5,20 +5,24 @@
 ===========================================================*/
 
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 100%; /* Width of the outside
+     container */
 }
 
 /* The slider itself */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
+    border-radius: 10px;
     width: 100%; /* Full-width */
-    height: 10px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
+    height: 5px; /* Specified height */
+    background: #ee6804; /* Grey background */
+
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
+    position: relative;
 }
 
 /* Mouse-over effects */
@@ -28,19 +32,24 @@
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none;
     appearance: none;
-    width: 40px; /* Set a specific slider handle width */
-    height: 40px; /* Slider handle height */
-    border-radius: 50%;
-    background: #e57814 ; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: -30px;
+    border: 0;
+    background-image: url('../img/scrollOwlIco.png');
+    cursor: pointer;
 }
 
+
 .slider::-moz-range-thumb {
-    width: 40px; /* Set a specific slider handle width */
-    height: 40px; /* Slider handle height */
-    background: #e57814; /* Green background */
+    width: 60px; /* Set a specific slider handle width */
+    height: 60px; /* Slider handle height */
+    position: relative;
+    top: -30px;
+    background-image: url('../img/scrollOwlIco.png'); /* Green background */
     cursor: pointer; /* Cursor on hover */
 }
 
