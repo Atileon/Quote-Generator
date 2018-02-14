@@ -42,10 +42,16 @@ function repeatQuotes(id,type,n){
 //The followin to change the Owl :P
 
 $('.crazyMode').click(function(){
+  $(this).addClass('active').siblings().removeClass('active');
+
+  $('body').removeClass('wiseOwl-style');
   $('.crazyOwl').removeClass('d-none');
   $('.wiseOwl').addClass('d-none');
 });
 $('.wiseMode').click(function(){
+  $(this).addClass('active').siblings().removeClass('active');
+
+  $('body').addClass('wiseOwl-style');
   $('.wiseOwl').removeClass('d-none');
   $('.crazyOwl').addClass('d-none');
 });

@@ -16,15 +16,23 @@
     border-radius: 10px;
     width: 100%; /* Full-width */
     height: 5px; /* Specified height */
-    background: #ee6804; /* Grey background */
+    background: #f00; /* Grey background */
 
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
-    position: relative;
 }
-
+/* this to change the bar color */
+.slider::-moz-range-track{
+  background-color: #ee6804;
+  height: 7px;
+}
+.slider::-webkit-slider-runnable-track{
+  background-color: #ee6804;
+  border-radius: 10px;
+  height: 7px;
+}
 /* Mouse-over effects */
 .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
@@ -33,6 +41,7 @@
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     width: 60px;
     height: 60px;
@@ -49,6 +58,8 @@
     height: 60px; /* Slider handle height */
     position: relative;
     top: -30px;
+    border:none;
+    background: transparent;
     background-image: url('../img/scrollOwlIco.png'); /* Green background */
     cursor: pointer; /* Cursor on hover */
 }
@@ -64,14 +75,45 @@ body{
   font-family: 'Annie Use Your Telescope', cursive;
   font-size: 1.2rem;
 }
+.wiseOwl-style{
+  background: #282e2c;
+  color:#d8832d;
+}
+#home{
+  text-decoration: none;
+  color:inherit;
+  transition: all .3s ease-in-out;
+}
+#home:hover{
+  text-shadow: 0px 2px 20px #777;
+}
+
 .gen-title, .btn{
   font-family: 'Julee',cursive !important;
 }
 .gen-sub{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.wiseQuote, .crazyQuote {
+  font-size: 1.8rem;
 }
 .btn{
   font-size: 1.7rem !important;
+}
+.btn.btn-ava{
+  background-color: #943103 ;
+  color: #fff;
+}
+.btn.btn-ava:hover{
+  background-color: #581c00 ;
+}
+.active{
+  background-color: #581c00 !important;
+}
+
+.btn:focus{
+  box-shadow: none !important;
 }
 .slideTxt{
   font-size: 1.7rem;
@@ -81,14 +123,13 @@ body{
 }
 #crazyContainer>p{
   font-family: 'Nanum Pen Script', cursive;
-  font-size: 1.5rem;
 }
 .crazyQuote, .wiseQuote{
   padding-top: 1rem !important;
+  font-size: 1.6rem;
 }
 #wiseContainer>p{
   font-family: 'Caveat', cursive;
-  font-size: 1.3rem;
 }
 #wiseOnTimer>p{
   font-family: 'Caveat', cursive;
@@ -96,6 +137,12 @@ body{
 }
 
 .myImg{
+
   border-radius: 20px;
-  box-shadow: 0 7px 20px #777;
+  box-shadow: 0 7px 20px #000;
+  transition: all .3s ease-in-out;
+}
+.myImg:hover{
+  border-radius: 50%;
+  box-shadow: 0 2px 10px #000;
 }

@@ -10,16 +10,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body class="wiseOwl-style">
     <!-- THE MAIN TITLE -->
-    <h1 class="text-center text-uppercase mt-5 col-12 gen-title">Owl Quote Generator<br><small class="text-muted gen-sub">An Openclassroom Project by AvA</small></h1>
+    <a href="#" id="home" class="text-center">
+      <h1 class="text-center text-uppercase mt-5 col-12 gen-title">Owl Quote Generator</h1>
+      <p class="text-capitalize gen-sub">An Openclassroom Project by AvA</p>
+    </a>
+
 
     <div class="container">
 
       <div class="row justify-content-center mt-3">
         <div class="btn-group btn-group-lg" role="group" aria-label="Switch the Owl">
-          <button class="btn btn-secondary crazyMode" type="button">Crazy Owl</button>
-          <button class="btn btn-secondary wiseMode" type="button">Wise Owl</button>
+          <button class="btn btn-ava crazyMode" type="button">Crazy Owl</button>
+          <button class="btn btn-ava wiseMode" type="button">Wise Owl</button>
         </div>
       </div>
 
@@ -37,7 +41,7 @@
 
       <!-- THE CRAZY OWL SECTION -->
       <div id="crazy" class="row mt-3 crazyOwl">
-        <div class="col-12 col-sm-5">
+        <div class="col-12 col-md-5">
           <a href="#crazy" class="btn firstBtn" data-type="crazy" role="button">
             <img class="img-fluid myImg" src="img/owlCoffee.jpg" alt="The Crazy Owl">
           </a>
