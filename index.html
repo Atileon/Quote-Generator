@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Crazy Owl Quote Generator</title>
+    <!-- GoogleFonts -->
     <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Caveat|Julee|Nanum+Pen+Script" rel="stylesheet">
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- css -->
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body class="wiseOwl-style">
+
+  <body>
+
     <!-- THE MAIN TITLE -->
     <a href="#" id="home" class="text-center">
       <h1 class="text-center text-uppercase mt-5 col-12 gen-title">Owl Quote Generator</h1>
       <p class="text-capitalize gen-sub">An Openclassroom Project by AvA</p>
     </a>
 
-
+    <!-- THE MAIN CONTAINER -->
     <div class="container">
 
       <div class="row justify-content-center mt-3">
         <div class="btn-group btn-group-lg" role="group" aria-label="Switch the Owl">
-          <button class="btn btn-ava crazyMode" type="button">Crazy Owl</button>
+          <button class="btn btn-ava crazyMode active" type="button">Crazy Owl</button>
           <button class="btn btn-ava wiseMode" type="button">Wise Owl</button>
         </div>
       </div>
 
       <!-- RANGE SLIDER -->
-      <div class="row justify-content-center pt-4">
+      <div id="content" class="row justify-content-center pt-4">
         <p class="col-12 text-center slideTxt pb-3">How many Quotes?</p>
         <div class="slidecontainer col-12 col-sm-6 m-2">
-         <input type="range" id="myRange" class="slider" min="1" max="5" value="1">
+         <input type="range" id="myRange" class="slider" min="1" max="5" value="3">
          <p id="valueSlider" class="text-center pt-3"></p>
         </div>
       </div>
@@ -40,22 +50,36 @@
       </div>
 
       <!-- THE CRAZY OWL SECTION -->
-      <div id="crazy" class="row mt-3 crazyOwl">
-        <div class="col-12 col-md-5">
-          <a href="#crazy" class="btn firstBtn" data-type="crazy" role="button">
+      <div id="crazy" class="row crazyOwl">
+        <!-- Link image -->
+        <div class="col-12 col-sm-5 ">
+          <a href="#content" class="btn firstBtn" data-type="crazy" role="button">
             <img class="img-fluid myImg" src="img/owlCoffee.jpg" alt="The Crazy Owl">
           </a>
-
         </div>
+
+        <!-- Crazy quotes container -->
         <div id="crazyContainer" class="col-12 col-sm-7">
           <!-- Here is generated the quotes -->
         </div>
+
+        <!-- Social and github links Only on the homepage (Crazy Owl section)-->
+        <div class="container p-5">
+          <nav id="social" class="nav justify-content-center">
+            <a class="nav-link" href="#"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a class="nav-link" href="#"><i class="fab fa-github fa-3x"></i></a>
+            <a class="nav-link" href="#"><i class="fab fa-twitter-square fa-3x"></i></a>
+          </nav>
+        </div>
+
       </div>
+      <!-- END CRAZY OWL SECTION -->
 
       <!-- THE WISE OWL SECTION -->
       <div id="wise" class="row wiseOwl d-none">
+        <!-- Link image -->
         <div class="col-12 col-sm-5">
-          <a href="#wise"  data-type="wise" class="btn firstBtn" role="button">
+          <a href="#content"  data-type="wise" class="btn firstBtn" role="button">
             <img class="img-fluid myImg" src="img/wiseOwl.jpg" alt="The Wise Owl">
           </a>
 
@@ -63,26 +87,26 @@
         <div id="wiseContainer" class="col-12 col-sm-7">
           <!-- Here is generated the quotes -->
         </div>
+
+        <!-- Go to Top button -->
+        <div class="container">
+          <div class="row justify-content-center">
+            <a href="#" class="col-2 btn btn-danger d-md-none text-center" role="button"><i class="far fa-arrow-alt-circle-up"></i></a>
+          </div>
+        </div>
+
         <!-- The quote generated at interval -->
-        <div id="wiseOnTimer" class="col-12 text-center p-5">
-          <!-- Here is generated the quotes -->
+        <div class="container p-5">
+          <div id="wiseOnTimer" class="col-12 text-center">
+            <!-- Here is generated the quotes -->
+          </div>
         </div>
       </div>
+      <!-- END WISE OWL SECTION -->
+
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- END OF MAIN CONTAINER -->
 
 
     <script
