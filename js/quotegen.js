@@ -59,7 +59,7 @@ $('.wiseMode').click(function(){
 //This for append the value of the slider
 var slider = document.getElementById("myRange");
 var output = document.getElementById("valueSlider");
-output.innerHTML = slider.value; // Display the default slider value
+output.innerHTML = slider.value; // Display the default slider value... 1 in this case
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
@@ -74,11 +74,15 @@ $('.firstBtn, .secondBtn').click(function(){
   let type = $(this).attr('data-type'); //this to set the type of quote: wise or crazy
 
   let idContainer = $(this).parent().siblings().attr('id');//It pass the container parameter for repeatQuotes() in this case the parent of buttons.
-  //
+
+  //==========This block just for test =======
+
   // let quotes = 4; // It will set how many quotes would be displayed in a random range
   // let num = Math.floor((Math.random() * quotes) + 1);// te random value for the number(numeric parameter on repeatQuotes function) of quotes on display
 
-  let num = $('#myRange').val();
+  //========================================
+
+  let num = $('#myRange').val();//It takes the range slider value
 
 
   $('#'+idContainer).children().remove();//This to remove the previous quotes created on click event.
@@ -89,16 +93,21 @@ $('.firstBtn, .secondBtn').click(function(){
 });
 
 
-//The next lines to set an Interval to the Famous quotes
+
+//The next lines to set an Interval to the WiseOwl quotes
 
 
 function wiseOnTimer(){
   let theCont = 'wiseOnTimer';
   let theType = 'wise';
-  $('#'+theCont).children('.wiseQuote').remove();
 
-  repeatQuotes(theCont, theType,1);
+  $('#'+theCont).children('.wiseQuote').remove();//this removes the last quote generated
+
+  repeatQuotes(theCont, theType,1); //this call the quotes function
+
+  $('#'+theCont).children('p.wiseQuote').delay(6000).fadeOut(1000);//this to fade out the current quote
 }
 
-wiseOnTimer();
-setInterval(wiseOnTimer,7000);
+wiseOnTimer(); //call the quote with interval 'wiseOntimer' function
+
+setInterval(wiseOnTimer,7000);// this set an interval to recall the repeatQuotes function into the wiseOntimer function
