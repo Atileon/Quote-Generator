@@ -71,21 +71,27 @@
 font-family: 'Annie Use Your Telescope', cursive;
 font-family: 'Julee', cursive;
 font-family: 'Caveat', cursive; */
+
 body{
   font-family: 'Annie Use Your Telescope', cursive;
   font-size: 1.2rem;
 }
+/* This rule set the background and text for the Wise owl */
 .wiseOwl-style{
   background: #282e2c;
-  color:#d8832d;
+  color:#d8832d !important;
 }
-#home{
+
+#home {
   text-decoration: none;
   color:inherit;
-  transition: all .3s ease-in-out;
 }
-#home:hover{
-  text-shadow: 0px 2px 20px #777;
+#home h1{
+  transition: transform .3s ease-in-out;
+}
+#home h1:hover{
+  /* text-shadow: 0px 2px 3px #000; */
+  transform: scale(1.2);
 }
 
 .gen-title, .btn{
@@ -121,28 +127,60 @@ body{
 #valueSlider{
   font-size: 2.2rem;
 }
-#crazyContainer>p{
-  font-family: 'Nanum Pen Script', cursive;
-}
+
 .crazyQuote, .wiseQuote{
   padding-top: 1rem !important;
   font-size: 1.6rem;
 }
+
+/* Crazy quotes */
+#crazyContainer>p{
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+/* Wise quotes */
 #wiseContainer>p{
   font-family: 'Caveat', cursive;
+}
+span.author{
+  color:#943103;
+}
+
+/* Quotes at interval time */
+#wiseOnTimer{
+  background: rgba(0,0,0,.7);
+  padding: 1.5rem;
+  border: 1px solid #d8832d;
+  border-radius: 15px;
+  box-shadow: 0 0px 10px #000;
 }
 #wiseOnTimer>p{
   font-family: 'Caveat', cursive;
   font-size: 2rem;
 }
 
-.myImg{
+#social a{
+  color: #410d0f;
+}
 
-  border-radius: 20px;
-  box-shadow: 0 7px 20px #000;
-  transition: all .3s ease-in-out;
+/* Image link rules */
+.myImg{
+  border-radius: 50%;
+  position: relative;
+  top:0;
+  left: 0;
+  z-index: 10;
+  border: 2px solid #d8832d;
+  transition: border .4s ease-in-out, transform .3s linear;
 }
 .myImg:hover{
   border-radius: 50%;
-  box-shadow: 0 2px 10px #000;
+  border: 3px solid #d8832d;
+  }
+.myImg:active{
+  border: 15px solid #d8832d;
+  box-shadow: none;
+  transform: rotate(1080deg);
+  transition: border .2s ease-in-out, transform 0s;
+
 }
