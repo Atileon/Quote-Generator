@@ -24,13 +24,15 @@ quote.prototype.generator = function(id,type){
   let newEl = document.createElement('p');
 
     let crazyQuote =
-    this.w1+' '
+    '-'
+    +this.w1+' '
     +this.w2+' '
     +this.w3+', '
     +this.w4+' '
     +this.w5+', '
     +this.w6+' '
-    +this.w7;
+    +this.w7
+    +'-';
 
     console.log(crazyQuote);
 
@@ -63,7 +65,8 @@ wiseOwl.prototype.generator = function(id){
 
   let newEl = document.createElement('p');
   let wiseQuote =
-  this.quote+ '<br>'+
+  '" '+
+  this.quote+ '"<br>'+
   '<span class="author">- '+
   this.author+
   ' -</span>';
