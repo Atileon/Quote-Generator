@@ -3,7 +3,7 @@
   <head>
     <!-- meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
     <meta name="author" content="Steve N. Peralta R. (Atileon)">
     <meta name="description" content="This was a project at Openclassrooms aiming to create a random quote generator with Javascript. Te current date of this project is february 2018">
 
@@ -42,15 +42,20 @@
       </div>
 
       <!-- RANGE SLIDER -->
-      <div id="content" class="row justify-content-center pt-4">
-        <p class="col-12 text-center slideTxt pb-3">How many Quotes?</p>
-        <div class="slidecontainer col-12 col-sm-6 m-2">
+      <div id="content" class="row justify-content-center ">
+        <div class="col-12 pt-4">
+            <p class="col-12 text-center slideTxt pb-3">How many Quotes?</p>
+        </div>
+
+        <div class="slidecontainer col-12 col-sm-6">
          <input type="range" id="myRange" class="slider" min="1" max="5" value="3">
          <p id="valueSlider" class="text-center pt-3"></p>
         </div>
       </div>
-      <div class="row col-12 justify-content-center">
-        <p class="text-center slideTxt">Click on the Image to Generate the Quotes</p>
+      <div class="row">
+        <div class="col-12 justify-content-center">
+          <p class="text-center slideTxt">Click on the Image to Generate the Quotes</p>
+        </div>
       </div>
 
       <!-- THE CRAZY OWL SECTION -->

@@ -12,7 +12,7 @@
 /* The slider itself */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
+    -moz-appearance: none;
     border-radius: 10px;
     width: 100%; /* Full-width */
     height: 5px; /* Specified height */
@@ -42,7 +42,6 @@
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
     width: 60px;
     height: 60px;
     position: relative;
@@ -101,9 +100,11 @@ body{
   font-size: 1.4rem;
 }
 
-.wiseQuote, .crazyQuote {
-  font-size: 1.8rem;
+.crazyQuote, .wiseQuote{
+  padding-top: 1rem !important;
+  font-size: 1.6rem;
 }
+
 .btn{
   font-size: 1.7rem !important;
 }
@@ -128,10 +129,6 @@ body{
   font-size: 2.2rem;
 }
 
-.crazyQuote, .wiseQuote{
-  padding-top: 1rem !important;
-  font-size: 1.6rem;
-}
 
 /* Crazy quotes */
 #crazyContainer>p{
