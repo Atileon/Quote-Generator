@@ -110,4 +110,4 @@ function wiseOnTimer(){
 
 wiseOnTimer(); //call the quote with interval 'wiseOntimer' function
 
-setInterval(wiseOnTimer,7000);// this set an interval to recall the repeatQuotes function into the wiseOntimer function
+let theTimer = setInterval(wiseOnTimer,7000);// this set an interval to recall the repeatQuotes function into the wiseOntimer function

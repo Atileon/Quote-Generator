@@ -102,4 +102,36 @@ const quotes = [
     author: 'Henry Ford',
     quote: 'Whether you think you can or you think you can’t, you’re right.'
   },
+  //
+  {
+    author: 'Johann Wolfgang von Goethe',
+    quote: 'Whatever you can do, or dream you can, begin it.  Boldness has genius, power and magic in it'
+  },{
+    author: 'Frank Sinatra',
+    quote: 'The best revenge is massive success.'
+  },{
+    author: 'Anais Nin',
+    quote: 'Life shrinks or expands in proportion to one\'s courage.'
+  },{
+    author: 'Vincent Van Gogh',
+    quote: 'If you hear a voice within you say “you cannot paint,” then by all means paint and that voice will be silenced.'
+  },{
+    author: 'Aristotle',
+    quote: 'There is only one way to avoid criticism: do nothing, say nothing, and be nothing.'
+  },{
+    author: 'Jesus',
+    quote: 'Ask and it will be given to you; search, and you will find; knock and the door will be opened for you.'
+  },{
+    author: 'Ralph Waldo Emerson',
+    quote: 'The only person you are destined to become is the person you decide to be.'
+  },{
+    author: 'Henry David Thoreau',
+    quote: 'Go confidently in the direction of your dreams.  Live the life you have imagined.'
+  },{
+    author: 'Theodore Roosevelt',
+    quote: 'Believe you can and you’re halfway there.'
+  },{
+    author: 'Plato',
+    quote: 'We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.'
+  },
 ];
